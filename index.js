@@ -1,9 +1,9 @@
 // navbar-toggler 클래스를 가진 버튼을 클릭하면, list-group 클래스에 show 클래스를 부착한다.
-document
-  .getElementsByClassName("navbar-toggler")[0]
-  .addEventListener("click", function () {
-    document.getElementsByClassName("list-group")[0].classList.toggle("show");
-  });
+document.querySelector('.navbar-toggler').addEventListener('click', function() {
+  document.querySelector('.list-group').classList.toggle('show');
+})
+
+
 
 // login-button 클래스를 가진 버튼을 클릭하면, black-bg 클래스에 show 클래스를 부착한다.
 $(".login-button").on("click", function () {

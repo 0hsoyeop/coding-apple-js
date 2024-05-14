@@ -43,7 +43,11 @@
 //     document.getElementsByClassName('tab-content')[2].classList.add('show');
 // })
 
-for (let i=0; i< $('.tab-button').length; i++) {
+// for (let i=0; i< $('.tab-button').length; i++) {
+//     openTab(i);
+// }
+
+function openTab(i) {
     $('.tab-button').eq(i).on('click', function() {
         $('.tab-button').removeClass('orange');
         $('.tab-content').removeClass('show');
@@ -51,3 +55,18 @@ for (let i=0; i< $('.tab-button').length; i++) {
         $('.tab-content').eq(i).addClass('show');
     })
 }
+
+// $('.list').click(function(e) {
+//     // 지금 누른게 0번이면, 0번 화면을 보여라
+//     if (e.target == document.querySelectorAll('.tab-button')[0]) {
+//         openTab(0);
+//     } else if (e.target == document.querySelectorAll('.tab-button')[1]) {
+//         openTab(1);
+//     } else if (e.target == document.querySelectorAll('.tab-button')[2]) {
+//         openTab(2);
+//     }
+// })
+
+$('.list').click(function(e) {
+    openTab(e.target.dataset.id);
+})
